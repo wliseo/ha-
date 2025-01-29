@@ -1,8 +1,8 @@
-<!DO<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <meta name="description" content="La HA - Comunidad de Twitch fundada por Horizonpedo. Únete a nuestra comunidad amable y empática.">
     <meta name="keywords" content="La HA, Horizonpedo, Twitch, comunidad, Erik González, streamer, Santa Rosa, Nuevo León">
     <meta name="author" content="Horizonpedo">
@@ -35,11 +35,24 @@
             margin: 0;
             padding: 0;
             line-height: 1.6;
+            font-size: 16px; /* Tamaño base para móviles */
         }
 
         h1, h2, h3 {
             margin: 0;
             color: var(--color-primary);
+        }
+
+        h1 {
+            font-size: 2rem; /* 32px */
+        }
+
+        h2 {
+            font-size: 1.5rem; /* 24px */
+        }
+
+        p {
+            font-size: 1rem; /* 16px */
         }
 
         a {
@@ -95,6 +108,10 @@
             top: 0;
             z-index: 1000;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        #menuToggle {
+            display: none; /* Ocultar por defecto */
         }
 
         nav a {
@@ -272,13 +289,94 @@
 
         /* Responsividad */
         @media (max-width: 768px) {
-            nav a {
-                display: block;
-                margin: 10px 0;
+            .header-content img {
+                width: 60px; /* Reducir tamaño de GIFs */
             }
 
+            .header-content h1 {
+                font-size: 1.5rem; /* Reducir tamaño del título */
+            }
+
+            /* Menú Hamburguesa */
+            #menuToggle {
+                display: block;
+                position: relative;
+                top: 10px;
+                left: 10px;
+                z-index: 1;
+                -webkit-user-select: none;
+                user-select: none;
+            }
+
+            #menuToggle input {
+                display: block;
+                width: 40px;
+                height: 32px;
+                position: absolute;
+                top: -7px;
+                left: -5px;
+                cursor: pointer;
+                opacity: 0;
+                z-index: 2;
+            }
+
+            #menuToggle span {
+                display: block;
+                width: 33px;
+                height: 4px;
+                margin-bottom: 5px;
+                position: relative;
+                background: var(--color-primary);
+                border-radius: 3px;
+                z-index: 1;
+                transform-origin: 4px 0px;
+                transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+                            opacity 0.55s ease;
+            }
+
+            #menuToggle input:checked ~ span {
+                opacity: 1;
+                transform: rotate(45deg) translate(-2px, -1px);
+                background: var(--color-primary);
+            }
+
+            #menuToggle input:checked ~ span:nth-last-child(3) {
+                opacity: 0;
+                transform: rotate(0deg) scale(0.2, 0.2);
+            }
+
+            #menuToggle input:checked ~ span:nth-last-child(2) {
+                transform: rotate(-45deg) translate(0, -1px);
+            }
+
+            #menu {
+                position: absolute;
+                width: 100%;
+                margin: -100px 0 0 -50px;
+                padding: 50px;
+                padding-top: 125px;
+                background: var(--color-secondary);
+                list-style-type: none;
+                -webkit-font-smoothing: antialiased;
+                transform-origin: 0% 0%;
+                transform: translate(-100%, 0);
+                transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+            }
+
+            #menu a {
+                padding: 10px 0;
+                font-size: 1.2rem;
+                color: var(--color-white);
+                text-decoration: none;
+            }
+
+            #menuToggle input:checked ~ ul {
+                transform: none;
+            }
+
+            /* Ajustes adicionales */
             .hero-image {
-                font-size: 1.5rem;
+                font-size: 1.2rem; /* Reducir tamaño de fuente */
             }
 
             .redes-sociales {
@@ -286,12 +384,26 @@
                 align-items: center;
             }
 
-            .header-content img {
-                width: 80px;
+            .redes-sociales a {
+                width: 80%; /* Ajustar ancho de botones */
+                margin: 10px 0;
             }
 
-            .header-content h1 {
-                font-size: 2rem;
+            footer {
+                position: relative; /* Footer no fijo en móviles */
+                padding: 20px 0;
+            }
+
+            .footer-buttons a {
+                width: 100%; /* Botones de footer ocupen todo el ancho */
+                margin: 5px 0;
+            }
+
+            #scrollToTop {
+                bottom: 20px;
+                right: 20px;
+                padding: 20px;
+                font-size: 24px;
             }
         }
     </style>
@@ -307,10 +419,18 @@
     </header>
 
     <nav>
-        <a href="#inicio">Inicio</a>
-        <a href="#nosotros">Sobre Nosotros</a>
-        <a href="#horizonpedo">Sobre Horizonpedo</a>
-        <a href="#daneritech">Mi Tienda Daneritech</a>
+        <div id="menuToggle">
+            <input type="checkbox" />
+            <span></span>
+            <span></span>
+            <span></span>
+            <ul id="menu">
+                <a href="#inicio"><li>Inicio</li></a>
+                <a href="#nosotros"><li>Sobre Nosotros</li></a>
+                <a href="#horizonpedo"><li>Sobre Horizonpedo</li></a>
+                <a href="#daneritech"><li>Mi Tienda Daneritech</li></a>
+            </ul>
+        </div>
     </nav>
 
     <div class="hero-image">
