@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DO<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
@@ -367,35 +367,48 @@
         </section>
 
         <!-- Sección de Mi Tienda Daneritech -->
-        <section id="daneritech">
-            <h2>Mi Tienda Daneritech</h2>
-            <p>Mi tienda de cómputo Daneritech 📍 Ubicaciones: 🏙️ Nuevo León: Donde las montañas se encuentran con la innovación y tecnología. 🌆 Guadalajara, Jalisco: La Perla Tapatía, hogar de la cultura y el progreso.</p>
-            <p>🇲🇽 Cobertura Nacional: Envíos a todo México, llevando nuestros servicios y productos de la frontera norte hasta la península de Yucatán.</p>
-            <p>💻 Servicios de Excelencia:</p>
-            <ul>
-                <li>Solución de problemas: No hay obstáculo que no podamos superar.</li>
-                <li>Armado de PC: Construimos máquinas poderosas y a la medida.</li>
-                <li>Limpieza y mantenimiento: Prolongamos la vida útil de tu equipo y lo mantenemos en perfecto estado.</li>
-            </ul>
-            <p>⌨️ Productos de Alta Calidad:</p>
-            <ul>
-                <li>Periféricos: Desde teclados mecánicos de última generación hasta ratones de precisión milimétrica.</li>
-                <li>Consolas y más: Sumérgete en el mundo de los videojuegos con los mejores accesorios.</li>
-            </ul>
-            <p>🗣️ Contáctanos: Envíanos un MD para obtener cotizaciones personalizadas. Nuestro equipo está listo para atenderte y ofrecerte la mejor experiencia.</p>
-            <a href="https://www.instagram.com/daneritech/?hl=es" target="_blank">
-                <img src="https://cdn.discordapp.com/attachments/947971116356477009/1333983209888940052/image.png?ex=679ae02d&is=67998ead&hm=e30c1b330cec2493b189c33799c09bf4415d220399fc82276823a280b899efee&" alt="Daneritech" loading="lazy">
-            </a>
-        </section>
+<section id="daneritech">
+    <h2>Mi Tienda Daneritech</h2>
+    <p>Mi tienda de cómputo Daneritech 📍 Ubicaciones:</p>
+    
+    <!-- Animación para Guadalajara -->
+    <div class="location-animation">
+        <img src="https://www.lugaresturisticosenmexico.com/wp-content/uploads/2022/05/Guadalajara-Jalisco.jpg" alt="Guadalajara, Jalisco" loading="lazy">
+        <p>🏙️ Guadalajara, Jalisco: La Perla Tapatía, hogar de la cultura y el progreso.</p>
+    </div>
+
+    <!-- Animación para Monterrey -->
+    <div class="location-animation">
+        <img src="https://ocvmty.com.mx/wp-content/uploads/monterrey-nl-3.jpg" alt="Monterrey, Nuevo León" loading="lazy">
+        <p>🌆 Monterrey, Nuevo León: Donde las montañas se encuentran con la innovación y tecnología.</p>
+    </div>
+
+    <p>🇲🇽 Cobertura Nacional: Envíos a todo México, llevando nuestros servicios y productos de la frontera norte hasta la península de Yucatán.</p>
+    <p>💻 Servicios de Excelencia:</p>
+    <ul>
+        <li>Solución de problemas: No hay obstáculo que no podamos superar.</li>
+        <li>Armado de PC: Construimos máquinas poderosas y a la medida.</li>
+        <li>Limpieza y mantenimiento: Prolongamos la vida útil de tu equipo y lo mantenemos en perfecto estado.</li>
+    </ul>
+    <p>⌨️ Productos de Alta Calidad:</p>
+    <ul>
+        <li>Periféricos: Desde teclados mecánicos de última generación hasta ratones de precisión milimétrica.</li>
+        <li>Consolas y más: Sumérgete en el mundo de los videojuegos con los mejores accesorios.</li>
+    </ul>
+    <p>🗣️ Contáctanos: Envíanos un MD para obtener cotizaciones personalizadas. Nuestro equipo está listo para atenderte y ofrecerte la mejor experiencia.</p>
+    <a href="https://www.instagram.com/daneritech/?hl=es" target="_blank">
+        <img src="https://cdn.discordapp.com/attachments/947971116356477009/1333983209888940052/image.png?ex=679ae02d&is=67998ead&hm=e30c1b330cec2493b189c33799c09bf4415d220399fc82276823a280b899efee&" alt="Daneritech" loading="lazy">
+    </a>
+</section>
     </main>
 
     <footer>
-        <p>© Technology and Software made by <a href="https://www.instagram.com/wliseo777oficial/?hl=es" target="_blank">wliseo</a></p>
-        <div class="footer-buttons">
-            <a href="https://www.instagram.com/wliseo777oficial/?hl=es" target="_blank">Instagram</a>
-            <a href="mailto:wlisesgonsan@gmail.com?subject=Elaboración de páginas web">Correo Electrónico</a>
-        </div>
-    </footer>
+    <p>© Technology and Software made by WLISEO 2025_2030</p>
+    <div class="footer-buttons">
+        <a href="https://www.instagram.com/wliseo777oficial/?hl=es" target="_blank">Instagram</a>
+        <a href="mailto:wlisesgonsan@gmail.com?subject=Elaboración de páginas web">Correo Electrónico</a>
+    </div>
+</footer>
 
     <!-- Botón de scroll to top -->
     <button id="scrollToTop" title="Volver arriba">↑</button>
