@@ -2,553 +2,1376 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <meta name="description" content="La HA - Comunidad de Twitch fundada por Horizonpedo. Únete a nuestra comunidad amable y empática.">
-    <meta name="keywords" content="La HA, Horizonpedo, Twitch, comunidad, Erik González, streamer, Santa Rosa, Nuevo León">
-    <meta name="author" content="Horizonpedo">
-    <!-- Meta Etiquetas para Redes Sociales (Open Graph) -->
-    <meta property="og:title" content="La HA - Comunidad de Twitch">
-    <meta property="og:description" content="La HA - Comunidad de Twitch fundada por Horizonpedo. Únete a nuestra comunidad amable y empática.">
-    <meta property="og:image" content="https://cdn.discordapp.com/icons/554517864783282212/a162738c267d23172ca6457b833af7b3.webp?size=100">
-    <meta property="og:url" content="https://tusitio.com">
-    <meta property="og:type" content="website">
-    <!-- Favicon -->
-    <link rel="icon" type="image/png" href="https://cdn.discordapp.com/icons/554517864783282212/a162738c267d23172ca6457b833af7b3.webp?size=100">
-    <title>La HA - Comunidad de Twitch</title>
-    <!-- Estilos CSS -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GeoAeroMéxico - CBTIS 38</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        /* Variables de colores */
         :root {
-            --color-primary: #1e88e5; /* Azul principal */
-            --color-secondary: #222; /* Fondo oscuro */
-            --color-text: #333; /* Texto oscuro */
-            --color-background: #f0f0f0; /* Fondo claro */
-            --color-white: #fff; /* Blanco */
-            --color-hover: #1565c0; /* Azul más oscuro para hover */
+            --color-primary: #2c3e50;
+            --color-secondary: #3498db;
+            --color-accent: #e74c3c;
+            --color-warning: #e74c3c;
+            --color-success: #2ecc71;
+            --color-instagram: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
         }
 
-        /* Estilos generales */
-        body {
-            font-family: 'Arial', sans-serif;
-            background-color: var(--color-background);
-            color: var(--color-text);
+        * {
+            box-sizing: border-box;
             margin: 0;
             padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            color: #333;
             line-height: 1.6;
-            font-size: 16px; /* Tamaño base para móviles */
-        }
-
-        h1, h2, h3 {
-            margin: 0;
-            color: var(--color-primary);
-        }
-
-        h1 {
-            font-size: 2rem; /* 32px */
-        }
-
-        h2 {
-            font-size: 1.5rem; /* 24px */
-        }
-
-        p {
-            font-size: 1rem; /* 16px */
-        }
-
-        a {
-            text-decoration: none;
-            color: inherit;
-            transition: color 0.3s ease;
-        }
-
-        a:hover {
-            color: var(--color-hover);
-        }
-
-        img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 10px;
-        }
-
-        /* Header */
-        header {
-            background-color: var(--color-primary);
-            padding: 20px 0;
-            text-align: center;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
-
-        .header-content {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 0 20px;
-        }
-
-        .header-content img {
-            width: 100px;
-            height: auto;
-            animation: float 3s ease-in-out infinite;
-        }
-
-        .header-content h1 {
-            color: black;
-            font-size: 2.5rem;
-            margin: 0;
-            animation: fadeInDown 1s ease-in-out;
-        }
-
-        /* Navegación */
-        nav {
-            background-color: var(--color-secondary);
-            padding: 10px;
-            text-align: center;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
-
-        #menuToggle {
-            display: none; /* Ocultar por defecto */
-        }
-
-        nav a {
-            color: var(--color-white);
-            margin: 0 15px;
-            font-weight: bold;
-            padding: 10px 15px;
-            border-radius: 5px;
-            transition: background-color 0.3s, transform 0.3s;
-        }
-
-        nav a:hover {
-            background-color: var(--color-hover);
-            transform: translateY(-3px);
-        }
-
-        /* Hero Section */
-        .hero-image {
-            width: 100%;
-            height: 100vh;
-            background-image: url('https://cdn.discordapp.com/icons/554517864783282212/a162738c267d23172ca6457b833af7b3.webp?size=100');
-            background-size: cover;
-            background-position: center;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            color: var(--color-white);
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-            font-size: 2rem;
-            animation: fadeIn 2s ease-in-out;
-        }
-
-        /* Main Content */
-        main {
-            padding: 20px;
-            margin-bottom: 60px; /* Espacio para el footer */
-        }
-
-        section {
-            margin-bottom: 40px;
-            opacity: 0;
-            animation: fadeInUp 1s ease-in-out forwards;
-        }
-
-        section:nth-child(1) { animation-delay: 0.5s; }
-        section:nth-child(2) { animation-delay: 1s; }
-        section:nth-child(3) { animation-delay: 1.5s; }
-        section:nth-child(4) { animation-delay: 2s; }
-
-        /* Redes Sociales */
-        .redes-sociales {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            margin-top: 20px;
-            flex-wrap: wrap;
-        }
-
-        .redes-sociales a {
-            text-align: center;
-            transition: transform 0.3s ease;
-            padding: 10px;
-            border-radius: 10px;
-            background-color: var(--color-white);
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
-
-        .redes-sociales a:hover {
-            transform: scale(1.1);
-            box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
-        }
-
-        .redes-sociales img {
-            width: 50px;
-            height: 50px;
-        }
-
-        .redes-sociales span {
-            display: block;
-            margin-top: 5px;
-            font-size: 14px;
-            color: var(--color-text);
-        }
-
-        /* Footer */
-        footer {
-            background-color: var(--color-secondary);
-            color: var(--color-white);
-            text-align: center;
-            padding: 10px 0;
-            position: fixed;
-            width: 100%;
-            bottom: 0;
-            box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
-        }
-
-        .footer-buttons {
-            margin-top: 20px;
-        }
-
-        .footer-buttons a {
-            background-color: var(--color-primary);
-            color: var(--color-white);
-            padding: 10px 20px;
-            border-radius: 5px;
-            margin: 5px;
-            text-transform: uppercase;
-            font-weight: bold;
-            transition: background-color 0.3s, transform 0.3s;
-        }
-
-        .footer-buttons a:hover {
-            background-color: var(--color-hover);
-            transform: translateY(-2px);
-        }
-
-        /* Botón de scroll to top */
-        #scrollToTop {
-            display: none;
-            position: fixed;
-            bottom: 80px;
-            right: 20px;
-            z-index: 99;
-            font-size: 18px;
-            border: none;
-            outline: none;
-            background-color: var(--color-primary);
-            color: var(--color-white);
-            cursor: pointer;
-            padding: 15px;
-            border-radius: 50%;
-            transition: background-color 0.3s ease;
-        }
-
-        #scrollToTop:hover {
-            background-color: var(--color-hover);
+            overflow-x: hidden;
         }
 
         /* Animaciones */
         @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
         }
 
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        @keyframes fadeInDown {
-            from {
-                opacity: 0;
-                transform: translateY(-20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
         }
 
         @keyframes float {
-            0%, 100% {
-                transform: translateY(0);
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+
+        /* Pantalla de acceso */
+        .password-screen {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: rgba(255, 255, 255, 0.95);
+            padding: 40px;
+            border-radius: 20px;
+            text-align: center;
+            color: var(--color-primary);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+            z-index: 1000;
+            width: 90%;
+            max-width: 500px;
+            animation: fadeIn 0.8s ease-out;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.3);
+        }
+
+        .password-screen h1 {
+            margin-bottom: 20px;
+            font-size: 2rem;
+            color: var(--color-primary);
+        }
+
+        .password-screen p {
+            font-size: 1.2rem;
+            margin-bottom: 25px;
+        }
+
+        .password-screen input {
+            padding: 15px;
+            font-size: 1.3rem;
+            border: 2px solid var(--color-secondary);
+            border-radius: 10px;
+            margin: 15px auto;
+            width: 120px;
+            text-align: center;
+            display: block;
+            transition: all 0.3s;
+        }
+
+        .password-screen input:focus {
+            border-color: var(--color-primary);
+            box-shadow: 0 0 10px rgba(52, 152, 219, 0.5);
+            outline: none;
+        }
+
+        /* Hero section */
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://cdn.pixabay.com/photo/2017/10/10/07/48/earth-2835439_1280.jpg') center/cover no-repeat;
+            height: 100vh;
+            min-height: 600px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            padding: 20px;
+            z-index: 2;
+            animation: fadeIn 1s ease-out;
+        }
+
+        .hero-content h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+        }
+
+        .hero-content p {
+            font-size: 1.5rem;
+            margin-bottom: 30px;
+            text-shadow: 1px 1px 4px rgba(0,0,0,0.5);
+        }
+
+        /* Contenedor principal */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+            position: relative;
+        }
+
+        .section-title h1 {
+            font-size: 2.5rem;
+            color: var(--color-primary);
+            display: inline-block;
+            padding-bottom: 15px;
+        }
+
+        .section-title h1::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 4px;
+            background: var(--color-secondary);
+            border-radius: 2px;
+        }
+
+        /* Grid y cards */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+            margin: 50px 0;
+        }
+
+        .card {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+        }
+
+        .card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: var(--color-secondary);
+            transition: all 0.4s ease;
+            z-index: -1;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+        }
+
+        .card:hover::before {
+            height: 100%;
+            opacity: 0.1;
+        }
+
+        .card h2 {
+            color: var(--color-primary);
+            margin-top: 0;
+            padding-bottom: 15px;
+            border-bottom: 2px solid var(--color-secondary);
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .card h3 {
+            color: var(--color-primary);
+            margin: 20px 0 15px;
+            font-size: 1.4rem;
+        }
+
+        .card ul {
+            padding-left: 20px;
+            margin-bottom: 20px;
+        }
+
+        .card li {
+            margin-bottom: 10px;
+            position: relative;
+            padding-left: 15px;
+        }
+
+        .card li::before {
+            content: '•';
+            position: absolute;
+            left: 0;
+            color: var(--color-secondary);
+            font-weight: bold;
+        }
+
+        /* Elementos especiales */
+        .datos-curiosos {
+            background: rgba(52, 152, 219, 0.1);
+            padding: 20px;
+            border-radius: 10px;
+            margin: 25px 0;
+            border-left: 5px solid var(--color-secondary);
+            position: relative;
+        }
+
+        .datos-curiosos h4 {
+            color: var(--color-primary);
+            margin-top: 0;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 1.2rem;
+        }
+
+        .aerolinea-tag {
+            display: inline-block;
+            background: var(--color-primary);
+            color: white;
+            padding: 4px 10px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            margin-right: 8px;
+            margin-bottom: 8px;
+            transition: all 0.3s;
+        }
+
+        .aerolinea-tag:hover {
+            transform: scale(1.05);
+            box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+        }
+
+        /* Tablas */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        th, td {
+            padding: 12px 15px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            background-color: var(--color-primary);
+            color: white;
+            font-weight: 600;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f8f9fa;
+        }
+
+        tr:hover {
+            background-color: #f1f1f1;
+        }
+
+        /* Botones */
+        .btn {
+            display: inline-block;
+            background: var(--color-secondary);
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            font-size: 1.1rem;
+            font-weight: 600;
+            transition: all 0.3s;
+            margin: 10px 5px;
+            text-decoration: none;
+            box-shadow: 0 4px 15px rgba(52, 152, 219, 0.3);
+        }
+
+        .btn:hover {
+            background: #2980b9;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(52, 152, 219, 0.4);
+        }
+
+        .btn:active {
+            transform: translateY(1px);
+        }
+
+        .btn-outline {
+            background: transparent;
+            border: 2px solid var(--color-secondary);
+            color: var(--color-secondary);
+            box-shadow: none;
+        }
+
+        .btn-outline:hover {
+            background: var(--color-secondary);
+            color: white;
+        }
+
+        .btn-block {
+            display: block;
+            width: 100%;
+            text-align: center;
+        }
+
+        /* Modal del cuestionario */
+        .quiz-modal {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: white;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 0 50px rgba(0,0,0,0.2);
+            display: none;
+            max-width: 800px;
+            width: 90%;
+            max-height: 90vh;
+            overflow-y: auto;
+            z-index: 1000;
+            animation: fadeIn 0.5s;
+        }
+
+        .close-modal {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: transparent;
+            border: none;
+            font-size: 1.8rem;
+            cursor: pointer;
+            color: var(--color-primary);
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            transition: all 0.3s;
+        }
+
+        .close-modal:hover {
+            background: #f1f1f1;
+            transform: rotate(90deg);
+        }
+
+        .timer {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: var(--color-primary);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 50px;
+            font-weight: bold;
+            z-index: 1001;
+            font-size: 1.2rem;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+
+        /* Preguntas */
+        .pregunta {
+            margin: 25px 0;
+            padding: 25px;
+            background: #f8f9fa;
+            border-radius: 15px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .pregunta::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 5px;
+            height: 100%;
+            background: var(--color-secondary);
+        }
+
+        .pregunta h3 {
+            color: var(--color-primary);
+            margin-top: 0;
+            margin-bottom: 20px;
+            font-size: 1.3rem;
+        }
+
+        .pregunta button {
+            display: block;
+            width: 100%;
+            margin: 10px 0;
+            text-align: left;
+            background: white;
+            color: var(--color-primary);
+            border: 1px solid #ddd;
+            padding: 15px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-size: 1rem;
+        }
+
+        .pregunta button:hover:not(:disabled) {
+            background: var(--color-secondary);
+            color: white;
+            border-color: var(--color-secondary);
+            transform: translateX(5px);
+        }
+
+        .pregunta button:disabled {
+            cursor: not-allowed;
+        }
+
+        .pregunta button.correcta {
+            background: var(--color-success);
+            color: white;
+            border-color: var(--color-success);
+        }
+
+        .pregunta button.incorrecta {
+            background: var(--color-warning);
+            color: white;
+            border-color: var(--color-warning);
+        }
+
+        /* Barra de progreso */
+        .progress-container {
+            margin: 40px 0;
+            text-align: center;
+        }
+
+        .progress-bar {
+            height: 12px;
+            background: #ecf0f1;
+            border-radius: 10px;
+            margin: 20px 0;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .progress {
+            height: 100%;
+            background: var(--color-secondary);
+            width: 0%;
+            transition: width 0.5s ease;
+            position: relative;
+        }
+
+        .progress::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(90deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.3) 50%, rgba(255,255,255,0.1) 100%);
+            animation: progressShine 2s infinite;
+        }
+
+        @keyframes progressShine {
+            0% { transform: translateX(-100%); }
+            100% { transform: translateX(100%); }
+        }
+
+        /* Trofeos */
+        .trophy-case {
+            display: flex;
+            gap: 25px;
+            justify-content: center;
+            margin: 40px 0;
+            flex-wrap: wrap;
+        }
+
+        .trophy {
+            font-size: 50px;
+            opacity: 0.3;
+            transition: all 0.5s;
+            filter: drop-shadow(0 4px 8px rgba(0,0,0,0.2));
+            animation: float 3s ease-in-out infinite;
+        }
+
+        .trophy:nth-child(1) { animation-delay: 0s; }
+        .trophy:nth-child(2) { animation-delay: 0.5s; }
+        .trophy:nth-child(3) { animation-delay: 1s; }
+
+        .trophy.active {
+            opacity: 1;
+            transform: scale(1.3);
+            filter: drop-shadow(0 6px 12px rgba(255, 215, 0, 0.6));
+        }
+
+        /* Resultados */
+        .resultados {
+            text-align: center;
+            margin-top: 40px;
+            font-size: 1.2rem;
+            animation: fadeIn 0.8s;
+        }
+
+        .resultados h3 {
+            color: var(--color-primary);
+            margin-bottom: 20px;
+            font-size: 1.8rem;
+        }
+
+        .resultados p {
+            margin-bottom: 20px;
+        }
+
+        /* Pantalla de éxito */
+        .success-screen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--color-success);
+            color: white;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            flex-direction: column;
+            z-index: 999;
+            animation: fadeIn 0.5s;
+            padding: 20px;
+        }
+
+        .success-screen h1 {
+            font-size: 3rem;
+            margin-bottom: 30px;
+            text-shadow: 2px 2px 8px rgba(0,0,0,0.3);
+            animation: pulse 2s infinite;
+        }
+
+        .success-screen p {
+            font-size: 1.5rem;
+            max-width: 800px;
+            margin-bottom: 20px;
+        }
+
+        .success-screen small {
+            font-size: 0.8rem;
+            opacity: 0.8;
+            margin-top: 30px;
+        }
+
+        /* Popup de Instagram */
+        .instagram-popup {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: white;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 15px 50px rgba(0,0,0,0.3);
+            z-index: 1001;
+            max-width: 400px;
+            width: 90%;
+            text-align: center;
+            display: none;
+            animation: fadeIn 0.5s;
+            border-top: 5px solid var(--color-secondary);
+        }
+
+        .instagram-popup h3 {
+            color: var(--color-primary);
+            margin-bottom: 20px;
+            font-size: 1.8rem;
+        }
+
+        .instagram-popup p {
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+            color: #555;
+        }
+
+        .instagram-link {
+            display: inline-block;
+            background: var(--color-instagram);
+            color: white;
+            padding: 12px 25px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.2rem;
+            margin: 20px 0;
+            transition: all 0.3s;
+            box-shadow: 0 4px 15px rgba(220, 39, 67, 0.3);
+        }
+
+        .instagram-link:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(220, 39, 67, 0.4);
+        }
+
+        .instagram-link i {
+            margin-right: 10px;
+        }
+
+        .close-popup {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: var(--color-primary);
+            color: white;
+            border: none;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            font-size: 1rem;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s;
+        }
+
+        .close-popup:hover {
+            transform: rotate(90deg);
+            background: var(--color-warning);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--color-primary);
+            color: white;
+            padding: 50px 20px;
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        footer p {
+            margin-bottom: 10px;
+        }
+
+        footer strong {
+            font-weight: 600;
+        }
+
+        footer small {
+            display: block;
+            margin-top: 20px;
+            font-size: 0.8rem;
+            opacity: 0.8;
+        }
+
+        .warning-text {
+            background: rgba(231, 76, 60, 0.1);
+            padding: 15px;
+            border-radius: 8px;
+            margin: 30px auto 0;
+            max-width: 800px;
+            border-left: 4px solid var(--color-warning);
+            font-size: 0.8rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero-content h1 {
+                font-size: 2.5rem;
             }
-            50% {
-                transform: translateY(-10px);
+
+            .hero-content p {
+                font-size: 1.2rem;
+            }
+
+            .password-screen {
+                padding: 30px 20px;
+            }
+
+            .password-screen h1 {
+                font-size: 1.8rem;
+            }
+
+            .card {
+                padding: 25px 20px;
+            }
+
+            .section-title h1 {
+                font-size: 2rem;
+            }
+
+            .quiz-modal {
+                padding: 30px 20px;
+            }
+
+            .pregunta {
+                padding: 20px 15px;
             }
         }
 
-        /* Responsividad */
-        @media (max-width: 768px) {
-            .header-content img {
-                width: 60px; /* Reducir tamaño de GIFs */
+        @media (max-width: 480px) {
+            .hero-content h1 {
+                font-size: 2rem;
             }
 
-            .header-content h1 {
-                font-size: 1.5rem; /* Reducir tamaño del título */
+            .grid {
+                grid-template-columns: 1fr;
             }
 
-            /* Menú Hamburguesa */
-            #menuToggle {
-                display: block;
-                position: relative;
-                top: 10px;
-                left: 10px;
-                z-index: 1;
-                -webkit-user-select: none;
-                user-select: none;
+            .btn {
+                padding: 12px 25px;
+                font-size: 1rem;
             }
 
-            #menuToggle input {
-                display: block;
-                width: 40px;
-                height: 32px;
-                position: absolute;
-                top: -7px;
-                left: -5px;
-                cursor: pointer;
-                opacity: 0;
-                z-index: 2;
-            }
-
-            #menuToggle span {
-                display: block;
-                width: 33px;
-                height: 4px;
-                margin-bottom: 5px;
-                position: relative;
-                background: var(--color-primary);
-                border-radius: 3px;
-                z-index: 1;
-                transform-origin: 4px 0px;
-                transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
-                            opacity 0.55s ease;
-            }
-
-            #menuToggle input:checked ~ span {
-                opacity: 1;
-                transform: rotate(45deg) translate(-2px, -1px);
-                background: var(--color-primary);
-            }
-
-            #menuToggle input:checked ~ span:nth-last-child(3) {
-                opacity: 0;
-                transform: rotate(0deg) scale(0.2, 0.2);
-            }
-
-            #menuToggle input:checked ~ span:nth-last-child(2) {
-                transform: rotate(-45deg) translate(0, -1px);
-            }
-
-            #menu {
-                position: absolute;
-                width: 100%;
-                margin: -100px 0 0 -50px;
-                padding: 50px;
-                padding-top: 125px;
-                background: var(--color-secondary);
-                list-style-type: none;
-                -webkit-font-smoothing: antialiased;
-                transform-origin: 0% 0%;
-                transform: translate(-100%, 0);
-                transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
-            }
-
-            #menu a {
-                padding: 10px 0;
-                font-size: 1.2rem;
-                color: var(--color-white);
-                text-decoration: none;
-            }
-
-            #menuToggle input:checked ~ ul {
-                transform: none;
-            }
-
-            /* Ajustes adicionales */
-            .hero-image {
-                font-size: 1.2rem; /* Reducir tamaño de fuente */
-            }
-
-            .redes-sociales {
-                flex-direction: column;
-                align-items: center;
-            }
-
-            .redes-sociales a {
-                width: 80%; /* Ajustar ancho de botones */
-                margin: 10px 0;
-            }
-
-            footer {
-                position: relative; /* Footer no fijo en móviles */
-                padding: 20px 0;
-            }
-
-            .footer-buttons a {
-                width: 100%; /* Botones de footer ocupen todo el ancho */
-                margin: 5px 0;
-            }
-
-            #scrollToTop {
-                bottom: 20px;
-                right: 20px;
-                padding: 20px;
-                font-size: 24px;
+            .trophy {
+                font-size: 40px;
             }
         }
     </style>
 </head>
 <body>
-
-    <header>
-        <div class="header-content">
-            <img src="https://i.pinimg.com/originals/bb/ce/52/bbce52e7c5117fbe92e7ad43bc6162f8.gif" alt="Gif izquierdo">
-            <h1>HA</h1>
-            <img src="https://i.pinimg.com/originals/37/4f/bf/374fbf808e9d6050becc319ce3c3fde7.gif" alt="Gif derecho">
-        </div>
-    </header>
-
-    <nav>
-        <div id="menuToggle">
-            <input type="checkbox" />
-            <span></span>
-            <span></span>
-            <span></span>
-            <ul id="menu">
-                <a href="#inicio"><li>Inicio</li></a>
-                <a href="#nosotros"><li>Sobre Nosotros</li></a>
-                <a href="#horizonpedo"><li>Sobre Horizonpedo</li></a>
-                <a href="#daneritech"><li>Mi Tienda Daneritech</li></a>
-            </ul>
-        </div>
-    </nav>
-
-    <div class="hero-image">
-        <div>¡Bienvenido a La HA!</div>
+    <!-- Pantalla de acceso -->
+    <div class="password-screen" id="passwordScreen">
+        <h1>¡Bienvenido a GeoAeroMéxico!</h1>
+        <p>Resuelve: 4 × 4 = ?</p>
+        <input type="number" id="password" placeholder="Respuesta">
+        <button class="btn" onclick="checkPassword()">Acceder</button>
     </div>
 
-    <main>
-        <!-- Sección de Inicio -->
-        <section id="inicio">
-            <h2>Inicio</h2>
-            <p>¡Bienvenido a La HA! 🌟 Esta maravillosa comunidad fue fundada en 2018 por la increíble persona conocida como Horizonpedo, o como le llaman en el mundo real, Erik 🤠. Horizonpedo no es solo un nombre, es un símbolo de dedicación y pasión por la creación de contenido. Desde sus humildes comienzos, ha trabajado incansablemente para construir una comunidad donde cada individuo se siente valorado y apreciado. Aquí, en La HA, queremos que te sientas como en casa, rodeado de personas con intereses y valores similares. Prepárate para embarcarte en un viaje lleno de risas, aprendizajes y conexiones significativas. No querrás perderte ni un solo momento de esta experiencia única e inigualable.</p>
-            <img src="https://cdn.discordapp.com/icons/554517864783282212/a162738c267d23172ca6457b833af7b3.webp?size=100" alt="Imagen de la comunidad La HA" loading="lazy">
-        </section>
+    <!-- Hero section -->
+    <div class="hero" id="heroSection" style="display: none;">
+        <div class="hero-content">
+            <h1>GeoAeroMéxico</h1>
+            <p>Explorando la geometría esférica y su aplicación en la aviación mexicana</p>
+        </div>
+    </div>
 
-        <!-- Sección de Sobre Nosotros -->
-        <section id="nosotros">
-            <h2>Sobre Nosotros</h2>
-            <p>La HA es mucho más que una simple comunidad en Twitch; es un refugio de amabilidad y empatía en el vasto mundo de Internet. Imagina un lugar donde cada miembro es recibido con los brazos abiertos y tratado con el máximo respeto. En La HA, valoramos la autenticidad, el apoyo mutuo y la colaboración. Aquí encontrarás a personas dispuestas a ayudarte, compartir tus intereses y acompañarte en tus aventuras. Nuestra comunidad es conocida por su ambiente cálido y acogedor, donde todos se sienten parte de una gran familia. ¿Qué esperas para unirte a nosotros y descubrir lo que significa ser parte de algo verdaderamente especial? 🚀</p>
-            <div class="redes-sociales">
-                <!-- Enlace de Discord -->
-                <a href="https://discord.gg/4bunKxMuwp" target="_blank" aria-label="Discord">
-                    <img src="https://cdn-icons-png.flaticon.com/512/2111/2111370.png" alt="Discord" loading="lazy">
-                    <span>Discord</span>
-                </a>
-                <!-- Enlace de Twitch -->
-                <a href="https://www.twitch.tv/horizonpedo" target="_blank" aria-label="Twitch">
-                    <img src="https://cdn-icons-png.flaticon.com/512/2111/2111668.png" alt="Twitch" loading="lazy">
-                    <span>Twitch</span>
-                </a>
-                <!-- Enlace de Instagram de Daneritech -->
-                <a href="https://www.instagram.com/daneritech/?hl=es" target="_blank" aria-label="Instagram Daneritech">
-                    <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram Daneritech" loading="lazy">
-                    <span>Daneritech</span>
-                </a>
-                <!-- Enlace de Instagram personal -->
-                <a href="https://www.instagram.com/horizonpedo/?hl=es" target="_blank" aria-label="Instagram Personal">
-                    <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram Personal" loading="lazy">
-                    <span>Horizonpedo</span>
-                </a>
-                <!-- Enlace de YouTube -->
-                <a href="https://www.youtube.com/@Horizonpedo" target="_blank" aria-label="YouTube">
-                    <img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png" alt="YouTube" loading="lazy">
-                    <span>YouTube</span>
-                </a>
+    <!-- Pantalla de éxito -->
+    <div class="success-screen" id="successScreen">
+        <h1>🎉 ¡Eres muy inteligente!</h1>
+        <p>¡Bienvenido al fascinante mundo de la geometría esférica y la aviación mexicana!</p>
+        <small>Te recuerdo que esto es un proyecto en fase de prueba y puede contener errores</small>
+    </div>
+
+    <!-- Contenido principal -->
+    <div class="container" id="mainContent" style="display: none;">
+        <div class="section-title">
+            <h1>GeoAeroMéxico</h1>
+            <p>Explorando la geometría esférica y su aplicación en la aviación mexicana</p>
+        </div>
+        
+        <div class="grid">
+            <!-- Sección de Geometría Esférica -->
+            <div class="card">
+                <h2><i class="fas fa-globe-americas"></i> Geometría Esférica</h2>
+                <p>La geometría esférica es el estudio de figuras en la superficie de una esfera, donde las "líneas rectas" son los círculos máximos.</p>
+                
+                <h3>Historia y Orígenes</h3>
+                <ul>
+                    <li><strong>Desarrollada por:</strong> Matemáticos griegos como Menelao de Alejandría (siglo I d.C.)</li>
+                    <li><strong>Popularizada por:</strong> Bernhard Riemann en el siglo XIX con su geometría diferencial</li>
+                    <li><strong>Año clave:</strong> 1854 - Riemann presenta su teoría de variedades dimensionales</li>
+                </ul>
+                
+                <h3>Aplicaciones Modernas</h3>
+                <ul>
+                    <li>Fundamental para navegación aérea (rutas ortodrómicas)</li>
+                    <li>Usada en sistemas satelitales y GPS</li>
+                    <li>Esencial en meteorología para predicciones</li>
+                    <li>Base para cartografía moderna (proyecciones)</li>
+                    <li>Utilizada en astronomía para cálculos celestes</li>
+                </ul>
+                
+                <div class="datos-curiosos">
+                    <h4><i class="fas fa-lightbulb"></i> Datos Curiosos</h4>
+                    <p>En una esfera, la suma de los ángulos de un triángulo siempre es mayor a 180° (a diferencia de la geometría plana).</p>
+                    <p>Los aviones siguen rutas ortodrómicas (arcos de círculo máximo) porque son las distancias más cortas entre dos puntos en la Tierra.</p>
+                </div>
             </div>
-            <img src="https://panels.twitch.tv/panel-73563261-image-f84bd121-4763-4bf2-9772-1bfb32785bb6" alt="Imagen de la comunidad" loading="lazy">
-        </section>
 
-        <!-- Sección de Sobre Horizonpedo -->
-        <section id="horizonpedo">
-            <h2>Sobre Horizonpedo</h2>
-            <p>Horizonpedo, cuyo verdadero nombre es Erik González, es una persona extraordinariamente humilde con un corazón tan grande como sus sueños. Nacido en Santa Rosa, Nuevo León, Erik ha crecido en un entorno donde la humildad y el trabajo duro son valores fundamentales. Desde muy joven, ha demostrado una pasión inquebrantable por el streaming y la creación de contenido. A sus 23 años, Erik ya ha dejado una marca indeleble en la plataforma de Twitch, ganándose el respeto y la admiración de su comunidad. Horizonpedo no solo es un streamer, es un líder, un mentor y una inspiración para muchos. Con su carisma natural y su dedicación incansable, está en camino de convertirse en una verdadera estrella en el mundo del streaming. Acompáñalo en este emocionante viaje y sé testigo del ascenso de una auténtica promesa en la industria del streaming. 🌟</p>
-            <img src="https://panels.twitch.tv/panel-73563261-image-daccac90-4ec4-4921-8c75-b8a82632423a" alt="Imagen de Horizonpedo" loading="lazy">
-        </section>
+            <!-- Aeropuertos -->
+            <div class="card">
+                <h2><i class="fas fa-plane-departure"></i> Aeropuertos clave de México</h2>
+                
+                <h3>Aeropuerto Internacional de la Ciudad de México (AICM)</h3>
+                <ul>
+                    <li><strong>Aerolíneas principales:</strong> 
+                        <span class="aerolinea-tag">Aeroméxico</span> 
+                        <span class="aerolinea-tag">Volaris</span> 
+                        <span class="aerolinea-tag">Viva Aerobus</span>
+                    </li>
+                    <li><strong>Rutas internacionales:</strong>
+                        <ul>
+                            <li>Nueva York (JFK) - Aeroméxico, Delta</li>
+                            <li>Madrid (MAD) - Aeroméxico, Iberia</li>
+                            <li>Los Ángeles (LAX) - Aeroméxico, Volaris, American</li>
+                            <li>Tokio (NRT) - Aeroméxico (vía Tijuana)</li>
+                        </ul>
+                    </li>
+                    <li><strong>Rutas nacionales más transitadas:</strong>
+                        <ul>
+                            <li>Ciudad de México - Cancún (Aeroméxico, Volaris, Viva)</li>
+                            <li>Ciudad de México - Monterrey (todas las aerolíneas)</li>
+                            <li>Ciudad de México - Guadalajara (todas las aerolíneas)</li>
+                        </ul>
+                    </li>
+                    <li><strong>Dato curioso:</strong> Más de 50 millones de pasajeros anuales</li>
+                </ul>
 
-        <!-- Sección de Mi Tienda Daneritech -->
-<section id="daneritech">
-    <h2>Mi Tienda Daneritech</h2>
-    <p>Mi tienda de cómputo Daneritech 📍 Ubicaciones:</p>
-    
-    <!-- Animación para Guadalajara -->
-    <div class="location-animation">
-        <img src="https://www.lugaresturisticosenmexico.com/wp-content/uploads/2022/05/Guadalajara-Jalisco.jpg" alt="Guadalajara, Jalisco" loading="lazy">
-        <p>🏙️ Guadalajara, Jalisco: La Perla Tapatía, hogar de la cultura y el progreso.</p>
+                <h3>Aeropuerto Internacional de Guadalajara (GDL)</h3>
+                <ul>
+                    <li><strong>Aerolíneas principales:</strong> 
+                        <span class="aerolinea-tag">Volaris</span> 
+                        <span class="aerolinea-tag">Aeroméxico</span> 
+                        <span class="aerolinea-tag">American</span>
+                    </li>
+                    <li><strong>Rutas internacionales:</strong>
+                        <ul>
+                            <li>San Francisco (SFO) - Volaris, United</li>
+                            <li>Vancouver (YVR) - Aeroméxico</li>
+                            <li>Chicago (ORD) - Volaris, American</li>
+                        </ul>
+                    </li>
+                    <li><strong>Rutas nacionales más transitadas:</strong>
+                        <ul>
+                            <li>Guadalajara - Tijuana (Volaris, Viva)</li>
+                            <li>Guadalajara - Ciudad de México (todas)</li>
+                            <li>Guadalajara - Cancún (Volaris, Viva)</li>
+                        </ul>
+                    </li>
+                    <li><strong>Dato curioso:</strong> Hub para conexiones transpacíficas</li>
+                </ul>
+
+                <h3>Aeropuerto Internacional de Monterrey (MTY)</h3>
+                <ul>
+                    <li><strong>Aerolíneas principales:</strong> 
+                        <span class="aerolinea-tag">Viva Aerobus</span> 
+                        <span class="aerolinea-tag">Aeroméxico</span> 
+                        <span class="aerolinea-tag">United</span>
+                    </li>
+                    <li><strong>Rutas internacionales:</strong>
+                        <ul>
+                            <li>Houston (IAH) - United, Aeroméxico</li>
+                            <li>Dallas (DFW) - American</li>
+                            <li>Panamá (PTY) - Copa Airlines</li>
+                        </ul>
+                    </li>
+                    <li><strong>Rutas nacionales más transitadas:</strong>
+                        <ul>
+                            <li>Monterrey - Ciudad de México (todas)</li>
+                            <li>Monterrey - Cancún (Viva, Volaris)</li>
+                            <li>Monterrey - Tijuana (Viva, Volaris)</li>
+                        </ul>
+                    </li>
+                    <li><strong>Dato curioso:</strong> Principal centro de carga aérea del norte de México</li>
+                </ul>
+            </div>
+            
+            <!-- Más información sobre geometría esférica -->
+            <div class="card">
+                <h2><i class="fas fa-calculator"></i> Matemáticas de la Geometría Esférica</h2>
+                <h3>Fórmulas clave</h3>
+                <ul>
+                    <li><strong>Ley de los cosenos esférica:</strong> cos(a) = cos(b)cos(c) + sin(b)sin(c)cos(A)</li>
+                    <li><strong>Ley de los senos esférica:</strong> sin(a)/sin(A) = sin(b)/sin(B) = sin(c)/sin(C)</li>
+                    <li><strong>Área de un triángulo esférico:</strong> A = R²(E - π) donde E es el exceso angular</li>
+                </ul>
+                
+                <h3>Comparación con geometría plana</h3>
+                <table>
+                    <tr>
+                        <th>Propiedad</th>
+                        <th>Plana</th>
+                        <th>Esférica</th>
+                    </tr>
+                    <tr>
+                        <td>Suma ángulos triángulo</td>
+                        <td>180°</td>
+                        <td>>180°</td>
+                    </tr>
+                    <tr>
+                        <td>Rectas paralelas</td>
+                        <td>Infinitas</td>
+                        <td>0</td>
+                    </tr>
+                    <tr>
+                        <td>Distancia más corta</td>
+                        <td>Línea recta</td>
+                        <td>Arco de círculo máximo</td>
+                    </tr>
+                </table>
+                
+                <div class="datos-curiosos">
+                    <h4><i class="fas fa-plane"></i> Aplicación en aviación</h4>
+                    <p>Los pilotos usan la geometría esférica para calcular rutas de gran círculo, que son las más cortas entre dos puntos en la Tierra. Por ejemplo, la ruta entre Tokio y Nueva York pasa cerca del Polo Norte, no a través del Océano Pacífico como podría parecer en un mapa plano.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Botón del cuestionario -->
+        <div class="progress-container">
+            <div style="text-align: center; margin: 50px 0;">
+                <button class="btn" onclick="startQuiz()"><i class="fas fa-rocket"></i> ¡Ponte a prueba! (Cuestionario de 20 preguntas)</button>
+                <div class="trophy-case">
+                    <div class="trophy">🏆</div>
+                    <div class="trophy">🥈</div>
+                    <div class="trophy">🥉</div>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress" id="quizProgress"></div>
+                </div>
+            </div>
+        </div>
     </div>
 
-    <!-- Animación para Monterrey -->
-    <div class="location-animation">
-        <img src="https://ocvmty.com.mx/wp-content/uploads/monterrey-nl-3.jpg" alt="Monterrey, Nuevo León" loading="lazy">
-        <p>🌆 Monterrey, Nuevo León: Donde las montañas se encuentran con la innovación y tecnología.</p>
+    <!-- Modal del cuestionario -->
+    <div class="quiz-modal" id="quizModal">
+        <button class="close-modal" onclick="closeQuiz()">×</button>
+        <div class="timer" id="timer">20:00</div>
+        <h2><i class="fas fa-question-circle"></i> Cuestionario GeoAeroMéxico</h2>
+        <div id="questions">
+            <!-- Preguntas se insertan aquí mediante JS -->
+        </div>
+        <div class="resultados" id="resultados" style="display: none;">
+            <h3>Resultados del Cuestionario</h3>
+            <p id="puntaje"></p>
+            <p id="mensaje"></p>
+            <button class="btn" onclick="closeQuiz()">Volver al contenido</button>
+        </div>
     </div>
 
-    <p>🇲🇽 Cobertura Nacional: Envíos a todo México, llevando nuestros servicios y productos de la frontera norte hasta la península de Yucatán.</p>
-    <p>💻 Servicios de Excelencia:</p>
-    <ul>
-        <li>Solución de problemas: No hay obstáculo que no podamos superar.</li>
-        <li>Armado de PC: Construimos máquinas poderosas y a la medida.</li>
-        <li>Limpieza y mantenimiento: Prolongamos la vida útil de tu equipo y lo mantenemos en perfecto estado.</li>
-    </ul>
-    <p>⌨️ Productos de Alta Calidad:</p>
-    <ul>
-        <li>Periféricos: Desde teclados mecánicos de última generación hasta ratones de precisión milimétrica.</li>
-        <li>Consolas y más: Sumérgete en el mundo de los videojuegos con los mejores accesorios.</li>
-    </ul>
-    <p>🗣️ Contáctanos: Envíanos un MD para obtener cotizaciones personalizadas. Nuestro equipo está listo para atenderte y ofrecerte la mejor experiencia.</p>
-    <a href="https://www.instagram.com/daneritech/?hl=es" target="_blank">
-        <img src="https://cdn.discordapp.com/attachments/947971116356477009/1333983209888940052/image.png?ex=679ae02d&is=67998ead&hm=e30c1b330cec2493b189c33799c09bf4415d220399fc82276823a280b899efee&" alt="Daneritech" loading="lazy">
-    </a>
-</section>
-    </main>
+    <!-- Popup de Instagram -->
+    <div class="instagram-popup" id="instagramPopup">
+        <button class="close-popup" onclick="closeInstagramPopup()">×</button>
+        <h3>¡Sígueme en Instagram!</h3>
+        <p>Me apoyas a seguir creando proyectos educativos como este</p>
+        <a href="https://www.instagram.com/wliseo777/profilecard/?igsh=MW9tNmw5bWo5cG5p" target="_blank" class="instagram-link">
+            <i class="fab fa-instagram"></i> @wliseo777
+        </a>
+        <p>¡Gracias por tu apoyo!<br>Sigamos aprendiendo juntos</p>
+    </div>
 
+    <!-- Footer -->
     <footer>
-    <p>© Technology and Software made by WLISEO 2025_2030</p>
-    <div class="footer-buttons">
-        <a href="https://www.instagram.com/wliseo777oficial/?hl=es" target="_blank">Instagram</a>
-        <a href="mailto:wlisesgonsan@gmail.com?subject=Elaboración de páginas web">Correo Electrónico</a>
-    </div>
-</footer>
+        <p>Desarrollado por <strong>Efraín Ulises González Sandoval</strong></p>
+        <p>Josefa Ortiz de Domínguez CBTIS 38</p>
+        <small>Uso exclusivo interno - Prohibido uso publicitario</small>
+        <div class="warning-text">
+            NOTA: Este es un proyecto educativo en fase de prueba. Puede contener errores o imprecisiones. La información presentada es para fines didácticos solamente.
+        </div>
+    </footer>
 
-    <!-- Botón de scroll to top -->
-    <button id="scrollToTop" title="Volver arriba">↑</button>
-
-    <!-- Script para el botón de scroll to top -->
     <script>
-        const scrollToTopButton = document.getElementById("scrollToTop");
-
-        window.onscroll = () => {
-            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-                scrollToTopButton.style.display = "block";
-            } else {
-                scrollToTopButton.style.display = "none";
+        // Configuración del cuestionario ampliado
+        const quizData = [
+            {
+                pregunta: "¿Qué matemático griego realizó importantes contribuciones tempranas a la geometría esférica?",
+                opciones: ["Euclides", "Menelao de Alejandría", "Pitágoras", "Arquímedes"],
+                correcta: 1,
+                explicacion: "Menelao de Alejandría (siglo I d.C.) escribió 'Sphaerica', la obra más antigua conocida sobre geometría esférica."
+            },
+            {
+                pregunta: "¿Qué aeropuerto mexicano maneja más tráfico de pasajeros internacionales?",
+                opciones: ["Guadalajara (GDL)", "Ciudad de México (AICM)", "Cancún (CUN)", "Monterrey (MTY)"],
+                correcta: 2,
+                explicacion: "Aunque el AICM tiene más tráfico total, Cancún recibe más pasajeros internacionales debido al turismo."
+            },
+            {
+                pregunta: "En geometría esférica, ¿cómo se llama la línea más corta entre dos puntos?",
+                opciones: ["Línea recta", "Ortodrómica", "Loxodrómica", "Paralela"],
+                correcta: 1,
+                explicacion: "La ortodrómica es el arco de círculo máximo que conecta dos puntos en una esfera, representando la distancia más corta."
+            },
+            {
+                pregunta: "¿Qué aerolínea mexicana tiene su hub principal en el AICM?",
+                opciones: ["Volaris", "Viva Aerobus", "Aeroméxico", "Interjet"],
+                correcta: 2,
+                explicacion: "Aeroméxico tiene su centro de operaciones principal en el Aeropuerto Internacional de la Ciudad de México."
+            },
+            {
+                pregunta: "¿Qué propiedad NO es cierta en geometría esférica?",
+                opciones: ["La suma de ángulos de un triángulo > 180°", "No existen líneas paralelas", "π (pi) vale 3.1416", "Los círculos máximos son análogos a líneas rectas"],
+                correcta: 2,
+                explicacion: "El valor de π es el mismo en todas las geometrías. Lo que cambia son las propiedades de figuras como triángulos y líneas paralelas."
+            },
+            {
+                pregunta: "¿Qué ruta aérea es la más transitada dentro de México?",
+                opciones: ["Ciudad de México-Monterrey", "Ciudad de México-Guadalajara", "Ciudad de México-Cancún", "Monterrey-Tijuana"],
+                correcta: 2,
+                explicacion: "La ruta entre la Ciudad de México y Cancún es la más transitada debido al turismo, con más de 3 millones de pasajeros anuales."
+            },
+            {
+                pregunta: "¿Qué proyección cartográfica preserva los ángulos pero distorsiona las áreas?",
+                opciones: ["Mercator", "Peters", "Robinson", "Azimutal"],
+                correcta: 0,
+                explicacion: "La proyección de Mercator, desarrollada en 1569, preserva los ángulos (útil para navegación) pero exagera las áreas cerca de los polos."
+            },
+            {
+                pregunta: "¿Qué aerolínea ofrece vuelos directos de México a Tokio?",
+                opciones: ["Aeroméxico", "Japan Airlines", "ANA", "Todas las anteriores"],
+                correcta: 0,
+                explicacion: "Actualmente solo Aeroméxico ofrece vuelos directos (con escala en Tijuana) entre México y Tokio."
+            },
+            {
+                pregunta: "En un triángulo esférico con ángulos de 90°, ¿cuánto suman sus ángulos?",
+                opciones: ["180°", "270°", "360°", "Depende del tamaño"],
+                correcta: 1,
+                explicacion: "En geometría esférica, un triángulo con tres ángulos rectos (como uno formado por dos meridianos y el ecuador) suma 270°."
+            },
+            {
+                pregunta: "¿Qué aeropuerto es el hub principal de Volaris?",
+                opciones: ["AICM (Ciudad de México)", "GDL (Guadalajara)", "TIJ (Tijuana)", "MTY (Monterrey)"],
+                correcta: 1,
+                explicacion: "Volaris tiene su centro de operaciones principal en el Aeropuerto Internacional de Guadalajara."
+            },
+            {
+                pregunta: "¿Qué científico formalizó la geometría esférica en el siglo XIX?",
+                opciones: ["Albert Einstein", "Carl Friedrich Gauss", "Bernhard Riemann", "Leonhard Euler"],
+                correcta: 2,
+                explicacion: "Bernhard Riemann desarrolló la geometría diferencial en 1854, sentando las bases matemáticas formales para la geometría esférica."
+            },
+            {
+                pregunta: "¿Qué ruta internacional tiene más vuelos desde México?",
+                opciones: ["México-Los Ángeles", "México-Madrid", "México-Buenos Aires", "México-Toronto"],
+                correcta: 0,
+                explicacion: "La ruta entre la Ciudad de México y Los Ángeles es la más transitada internacionalmente, con más de 20 vuelos diarios."
+            },
+            {
+                pregunta: "¿Qué propiedad comparten todas las proyecciones de mapas?",
+                opciones: ["Preservan distancias", "Preservan áreas", "Preservan ángulos", "Todas distorsionan algo"],
+                correcta: 3,
+                explicacion: "Es imposible representar una esfera en un plano sin distorsión. Todas las proyecciones sacrifican al menos una propiedad (distancias, áreas o ángulos)."
+            },
+            {
+                pregunta: "¿Qué aerolínea fue fundada primero?",
+                opciones: ["Aeroméxico", "Mexicana de Aviación", "Aeromar", "Taesa"],
+                correcta: 1,
+                explicacion: "Mexicana de Aviación fue fundada en 1921, mientras que Aeroméxico (originalmente Aeronaves de México) en 1934."
+            },
+            {
+                pregunta: "¿Qué instrumento de navegación usa principios de geometría esférica?",
+                opciones: ["Sextante", "Brújula", "Altímetro", "Anemómetro"],
+                correcta: 0,
+                explicacion: "El sextante mide ángulos entre objetos celestes y el horizonte, usando principios de geometría esférica para determinar la posición."
+            },
+            {
+                pregunta: "¿Qué aeropuerto tiene la pista más larga de México?",
+                opciones: ["AICM (Ciudad de México)", "MMDO (Durango)", "MMGL (Guadalajara)", "MMUN (Cancún)"],
+                correcta: 1,
+                explicacion: "El Aeropuerto de Durango tiene la pista más larga con 3,900 metros, construida para emergencias de transbordadores espaciales."
+            },
+            {
+                pregunta: "¿Qué matemático demostró que π es el mismo en geometría plana y esférica?",
+                opciones: ["Euclides", "Arquímedes", "Legendre", "Ninguno, es diferente"],
+                correcta: 3,
+                explicacion: "La razón entre la circunferencia y el diámetro de un círculo en una esfera depende del tamaño del círculo, por lo que π no es constante en geometría esférica."
+            },
+            {
+                pregunta: "¿Qué aerolínea mexicana tiene más rutas internacionales?",
+                opciones: ["Volaris", "Aeroméxico", "Viva Aerobus", "Calafia Airlines"],
+                correcta: 1,
+                explicacion: "Aeroméxico tiene la red más extensa con vuelos a América, Europa y Asia."
+            },
+            {
+                pregunta: "¿Qué concepto de geometría esférica es crucial para el GPS?",
+                opciones: ["Triángulos esféricos", "Tetraedros", "Polígonos regulares", "Cónicas"],
+                correcta: 0,
+                explicacion: "El GPS usa triángulos esféricos formados por satélites para calcular posiciones con precisión."
+            },
+            {
+                pregunta: "¿Qué ruta aérea era conocida como 'El Puente Aéreo' en México?",
+                opciones: ["México-Monterrey", "México-Guadalajara", "México-Cancún", "México-Tijuana"],
+                correcta: 1,
+                explicacion: "La ruta entre la Ciudad de México y Guadalajara era llamada así por la alta frecuencia de vuelos (cada 15 minutos en su auge)."
             }
-        };
+        ];
 
-        scrollToTopButton.addEventListener("click", () => {
-            document.body.scrollTop = 0;
-            document.documentElement.scrollTop = 0;
+        // Variables globales
+        let tiempoRestante = 1200; // 20 minutos en segundos
+        let intervalo;
+        let respuestasUsuario = [];
+        let preguntaActual = 0;
+        let quizActivo = false;
+
+        // Mostrar popup de Instagram después de 20 segundos
+        setTimeout(() => {
+            if (document.getElementById('mainContent').style.display === 'block') {
+                document.getElementById('instagramPopup').style.display = 'block';
+            }
+        }, 20000);
+
+        function closeInstagramPopup() {
+            document.getElementById('instagramPopup').style.display = 'none';
+        }
+
+        function checkPassword() {
+            const passwordInput = document.getElementById('password');
+            if (passwordInput.value === '16') {
+                // Ocultar pantalla de acceso
+                document.getElementById('passwordScreen').style.display = 'none';
+                
+                // Mostrar hero section
+                document.getElementById('heroSection').style.display = 'flex';
+                
+                // Mostrar pantalla de éxito
+                document.getElementById('successScreen').style.display = 'flex';
+                
+                setTimeout(() => {
+                    // Ocultar pantalla de éxito después de 3 segundos
+                    document.getElementById('successScreen').style.display = 'none';
+                    
+                    // Mostrar contenido principal
+                    document.getElementById('mainContent').style.display = 'block';
+                    
+                    // Ocultar hero section después de 1 segundo más
+                    setTimeout(() => {
+                        document.getElementById('heroSection').style.display = 'none';
+                    }, 1000);
+                    
+                    // Iniciar animaciones de las cards
+                    animateCards();
+                }, 3000);
+            } else {
+                // Efecto de error
+                passwordInput.style.borderColor = 'var(--color-warning)';
+                passwordInput.style.animation = 'shake 0.5s';
+                setTimeout(() => {
+                    passwordInput.style.animation = '';
+                }, 500);
+                
+                // Mostrar mensaje de error
+                alert("Respuesta incorrecta. Intenta nuevamente.");
+                passwordInput.value = '';
+                passwordInput.focus();
+            }
+        }
+
+        function animateCards() {
+            const cards = document.querySelectorAll('.card');
+            cards.forEach((card, index) => {
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(20px)';
+                card.style.transition = 'all 0.5s ease ' + (index * 0.1) + 's';
+                
+                setTimeout(() => {
+                    card.style.opacity = '1';
+                    card.style.transform = 'translateY(0)';
+                }, 100);
+            });
+        }
+
+        function startQuiz() {
+            // Mostrar modal
+            document.getElementById('quizModal').style.display = 'block';
+            document.getElementById('resultados').style.display = 'none';
+            document.getElementById('questions').style.display = 'block';
+            
+            // Reiniciar variables
+            tiempoRestante = 1200;
+            respuestasUsuario = [];
+            preguntaActual = 0;
+            quizActivo = true;
+            
+            // Actualizar barra de progreso
+            document.getElementById('quizProgress').style.width = '0%';
+            
+            // Iniciar temporizador
+            updateTimer();
+            intervalo = setInterval(updateTimer, 1000);
+            
+            // Cargar primera pregunta
+            cargarPregunta();
+        }
+
+        function updateTimer() {
+            tiempoRestante--;
+            
+            // Formatear tiempo como MM:SS
+            const minutos = Math.floor(tiempoRestante / 60).toString().padStart(2, '0');
+            const segundos = (tiempoRestante % 60).toString().padStart(2, '0');
+            document.getElementById('timer').textContent = `${minutos}:${segundos}`;
+            
+            // Cambiar color cuando quede poco tiempo
+            if (tiempoRestante <= 60) {
+                document.getElementById('timer').style.background = 'var(--color-warning)';
+            }
+            
+            // Finalizar quiz si se acaba el tiempo
+            if (tiempoRestante <= 0) {
+                finalizarQuiz();
+            }
+        }
+
+        function cargarPregunta() {
+            if (preguntaActual >= quizData.length) {
+                finalizarQuiz();
+                return;
+            }
+            
+            const pregunta = quizData[preguntaActual];
+            const contenedor = document.getElementById('questions');
+            
+            // Crear HTML de la pregunta
+            contenedor.innerHTML = `
+                <div class="pregunta">
+                    <h3>${preguntaActual + 1}. ${pregunta.pregunta}</h3>
+                    ${pregunta.opciones.map((opcion, i) => `
+                        <button onclick="seleccionarRespuesta(${i})">${String.fromCharCode(65 + i)}. ${opcion}</button>
+                    `).join('')}
+                    <div class="progress-bar">
+                        <div class="progress" style="width: ${((preguntaActual + 1) / quizData.length) * 100}%"></div>
+                    </div>
+                    <p style="text-align: center; margin-top: 10px;">Pregunta ${preguntaActual + 1} de ${quizData.length}</p>
+                </div>
+            `;
+            
+            // Actualizar barra de progreso general
+            document.getElementById('quizProgress').style.width = `${(preguntaActual / quizData.length) * 100}%`;
+        }
+
+        function seleccionarRespuesta(respuestaIndex) {
+            if (!quizActivo) return;
+            
+            const pregunta = quizData[preguntaActual];
+            const esCorrecta = respuestaIndex === pregunta.correcta;
+            
+            // Guardar respuesta del usuario
+            respuestasUsuario.push({
+                preguntaIndex: preguntaActual,
+                respuestaIndex: respuestaIndex,
+                correcta: esCorrecta,
+                explicacion: pregunta.explicacion
+            });
+            
+            // Deshabilitar todos los botones
+            const botones = document.querySelectorAll('.pregunta button');
+            botones.forEach(btn => btn.disabled = true);
+            
+            // Marcar respuesta correcta e incorrecta
+            botones[pregunta.correcta].classList.add('correcta');
+            if (!esCorrecta) {
+                botones[respuestaIndex].classList.add('incorrecta');
+            }
+            
+            // Mostrar explicación después de un breve retraso
+            setTimeout(() => {
+                const preguntaDiv = document.querySelector('.pregunta');
+                const explicacionDiv = document.createElement('div');
+                explicacionDiv.className = 'datos-curiosos';
+                explicacionDiv.innerHTML = `
+                    <h4><i class="fas fa-info-circle"></i> Explicación</h4>
+                    <p>${pregunta.explicacion}</p>
+                `;
+                preguntaDiv.appendChild(explicacionDiv);
+                
+                // Pasar a la siguiente pregunta después de 2 segundos
+                setTimeout(() => {
+                    preguntaActual++;
+                    if (preguntaActual < quizData.length) {
+                        cargarPregunta();
+                    } else {
+                        finalizarQuiz();
+                    }
+                }, 2000);
+            }, 1000);
+        }
+
+        function finalizarQuiz() {
+            // Detener temporizador
+            clearInterval(intervalo);
+            quizActivo = false;
+            
+            // Calcular resultados
+            const correctas = respuestasUsuario.filter(r => r.correcta).length;
+            const porcentaje = Math.round((correctas / quizData.length) * 100);
+            
+            // Mostrar resultados
+            document.getElementById('questions').style.display = 'none';
+            document.getElementById('resultados').style.display = 'block';
+            document.getElementById('puntaje').textContent = `Obtuviste ${correctas} de ${quizData.length} correctas (${porcentaje}%)`;
+            
+            // Mostrar mensaje según el desempeño
+            let mensaje = "";
+            if (porcentaje >= 90) {
+                mensaje = "¡Excelente! Dominas la geometría esférica y la aviación mexicana 🏆";
+                document.querySelectorAll('.trophy')[0].classList.add('active');
+                document.querySelectorAll('.trophy')[1].classList.add('active');
+                document.querySelectorAll('.trophy')[2].classList.add('active');
+            } else if (porcentaje >= 70) {
+                mensaje = "Muy bien, pero puedes mejorar. Revisa los conceptos de geometría esférica 🥈";
+                document.querySelectorAll('.trophy')[1].classList.add('active');
+                document.querySelectorAll('.trophy')[2].classList.add('active');
+            } else if (porcentaje >= 50) {
+                mensaje = "Estás en el camino correcto, sigue estudiando 🥉";
+                document.querySelectorAll('.trophy')[2].classList.add('active');
+            } else {
+                mensaje = "Te recomendamos repasar los materiales del curso. ¡Sigue intentándolo!";
+            }
+            
+            document.getElementById('mensaje').textContent = mensaje;
+            
+            // Actualizar barra de progreso al 100%
+            document.getElementById('quizProgress').style.width = '100%';
+        }
+
+        function closeQuiz() {
+            // Ocultar modal
+            document.getElementById('quizModal').style.display = 'none';
+            
+            // Reiniciar temporizador
+            document.getElementById('timer').textContent = '20:00';
+            document.getElementById('timer').style.background = 'var(--color-primary)';
+        }
+
+        // Permitir enviar la contraseña con Enter
+        document.getElementById('password').addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                checkPassword();
+            }
         });
+
+        // Efecto de shake para CSS
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes shake {
+                0%, 100% { transform: translateX(0); }
+                20%, 60% { transform: translateX(-5px); }
+                40%, 80% { transform: translateX(5px); }
+            }
+        `;
+        document.head.appendChild(style);
     </script>
 </body>
 </html>
