@@ -824,4 +824,31 @@
         
         // Cerrar modal al hacer clic fuera del contenido
         window.onclick = function(event) {
-            if (event.target.className ===
+            if (event.target.className === "modal") {
+                event.target.style.display = "none";
+                document.body.style.overflow = "auto";
+            }
+        }
+        
+        // Mostrar modal de bienvenida al cargar la página
+        window.onload = function() {
+            setTimeout(function() {
+                document.getElementById('welcomeModal').style.display = "block";
+                document.body.style.overflow = "hidden";
+            }, 300);
+        }
+        
+        // Cerrar modal de bienvenida
+        document.querySelector('.welcome-close').onclick = function() {
+            document.getElementById('welcomeModal').style.display = "none";
+            document.body.style.overflow = "auto";
+        }
+        
+        // Cerrar modal de bienvenida con el botón
+        document.querySelector('.welcome-button').onclick = function() {
+            document.getElementById('welcomeModal').style.display = "none";
+            document.body.style.overflow = "auto";
+        }
+    </script>
+</body>
+</html>
