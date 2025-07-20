@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>El Mejor Restaurante de Guadalajara</title>
+    <title>La Carcacha - El Mejor Restaurante de Guadalajara</title>
     <style>
         * {
             margin: 0;
@@ -27,7 +27,7 @@
             border-radius: 20px;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
             padding: 40px;
-            max-width: 600px;
+            max-width: 700px;
             width: 100%;
         }
         
@@ -54,7 +54,7 @@
             flex-wrap: wrap;
             gap: 20px;
             justify-content: center;
-            margin-top: 30px;
+            margin: 30px 0;
         }
         
         .btn {
@@ -93,24 +93,146 @@
             filter: drop-shadow(2px 2px 2px rgba(0,0,0,0.2));
         }
         
-        @media (max-width: 480px) {
-            .container {
-                padding: 25px;
-            }
-            
+        .redes-container {
+            margin-top: 40px;
+            padding: 25px;
+            background: linear-gradient(to right, #ff6b00, #ff8c00);
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .redes-container::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 5px;
+            background: linear-gradient(to right, #ff0000, #ff9900, #ffff00, #00ff00, #00ffff, #0000ff, #ff00ff);
+        }
+        
+        .redes-title {
+            font-size: 2.2rem;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.4);
+            margin-bottom: 20px;
+            font-weight: 900;
+            letter-spacing: 1px;
+        }
+        
+        .redes-subtitle {
+            font-size: 1.4rem;
+            color: #fff;
+            margin-bottom: 25px;
+            font-weight: bold;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+        }
+        
+        .social-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            flex-wrap: wrap;
+        }
+        
+        .social-btn {
+            display: flex;
+            align-items: center;
+            padding: 15px 30px;
+            border-radius: 50px;
+            font-weight: bold;
+            font-size: 1.1rem;
+            text-decoration: none;
+            transition: all 0.3s;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+        }
+        
+        .social-btn:hover {
+            transform: scale(1.05) translateY(-5px);
+            box-shadow: 0 8px 15px rgba(0,0,0,0.4);
+        }
+        
+        .social-btn.instagram {
+            background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+            color: white;
+        }
+        
+        .social-btn.tiktok {
+            background: linear-gradient(to right, #000000, #00f2ea);
+            color: white;
+        }
+        
+        .social-icon {
+            font-size: 1.5rem;
+            margin-right: 10px;
+        }
+        
+        .fireworks {
+            position: absolute;
+            top: -20px;
+            font-size: 2.5rem;
+            animation: firework 1.5s infinite;
+            opacity: 0;
+        }
+        
+        .fireworks.left {
+            left: 10%;
+            animation-delay: 0.5s;
+        }
+        
+        .fireworks.right {
+            right: 10%;
+            animation-delay: 1s;
+        }
+        
+        @keyframes firework {
+            0% { opacity: 0; transform: translateY(0) scale(0.5); }
+            50% { opacity: 1; }
+            100% { opacity: 0; transform: translateY(-50px) scale(1.5); }
+        }
+        
+        @media (max-width: 768px) {
             h1 {
                 font-size: 2rem;
             }
             
-            .btn {
+            .redes-title {
+                font-size: 1.8rem;
+            }
+            
+            .redes-subtitle {
+                font-size: 1.2rem;
+            }
+            
+            .btn, .social-btn {
                 min-width: 100%;
+            }
+            
+            .social-buttons {
+                flex-direction: column;
+                gap: 15px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .container {
+                padding: 20px;
+            }
+            
+            h1 {
+                font-size: 1.7rem;
+            }
+            
+            .redes-title {
+                font-size: 1.5rem;
             }
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <!-- Logo simulado con texto -->
         <div class="logo">🍔🌭🍟</div>
         
         <h1>Bienvenido al mejor restaurante de comida rápida de Guadalajara</h1>
@@ -128,6 +250,24 @@
             <a href="https://maps.app.goo.gl/ynMMJPxupkG9XRPk7?g_st=iwb" target="_blank" class="btn btn-mapa">
                 UBICACIÓN
             </a>
+        </div>
+        
+        <div class="redes-container">
+            <div class="fireworks left">🎆</div>
+            <div class="fireworks right">🎇</div>
+            
+            <h2 class="redes-title">¡¡CHECA NUESTRAS REDES SOCIALES!!</h2>
+            <p class="redes-subtitle">Para las mejores promos del mercado, sorpresas y mucho más!</p>
+            
+            <div class="social-buttons">
+                <a href="https://www.instagram.com/la_carcacha_oficial?igsh=NXlsdHQxYTN1NWMx" target="_blank" class="social-btn instagram">
+                    <span class="social-icon">📸</span> Instagram
+                </a>
+                
+                <a href="https://www.tiktok.com/@lacarcacha.oficial?_t=ZS-8yBELrKoHpY&_r=1" target="_blank" class="social-btn tiktok">
+                    <span class="social-icon">🎵</span> TikTok
+                </a>
+            </div>
         </div>
     </div>
 </body>
